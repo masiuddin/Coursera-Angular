@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="CalculatingModule">
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app1.js"></script>
     <title>Hello Coursera</title>
   </head>
-  <body>
-    <h1> Coursera example to count characters in textbox </h1>
-    <div>
-      <input type="text" id="name"/>
+  <body ng-controller="CalculateController">
+    <h1> Coursera example to count characters in textbox {{sayHello()}}</h1>
+    <div >
+      <input type="text" id="name" ng-model="name" greeting="hello"/>
       <div>
-        the count of the characters in the text box is <span id="count"></span>
-      </div>
+        the count of the characters in the text box is <span id="count">
+        {{name}}</span>
+        </div>
     </div>
+    <script>
+      //**  The below example shows how the angular gets directive from html
+
+      // var element = document.getElementById("name");
+      // console.log(element.getAttribute("greeting"));
+
+      // var element = document.querySelector("[greeting]");
+      // console.log(element);
+
+
+    </script>
   </body>
 </html>
